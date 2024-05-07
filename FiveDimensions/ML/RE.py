@@ -8,16 +8,16 @@ with open('test.json', 'r') as f:
     data = json.load(f)
 
 patterns = [
-    r'Now answer this question: \" (.*?)\? (Yes|No)',
+    r'Now answer this question: (.*?)\? (Yes|No)',
     r'Question: (.*?)\? (Yes|No)',
-    r'Does the news (.*?)\? No or Yes\? (Yes|No)',
-    r'Now answer this question: \"(.*?)\"\nOptions:\n- No\n- Yes (Yes|No)',
-    r'Does the news headline (.*?)\?\nOptions:\n- Yes\n- No (Yes|No)',
-    r'Does the news headline (.*?)\? Yes or No\? (Yes|No)',
-    r'Question: (.*?)\nAnswer: (Yes|No)',
-    r'what is the answer to the question \"(.*?)\" (Yes|No)',
-    r'Does the news headline (.*?)\? (Yes|No)'
-]
+    r"Does the news headline (.*?)\? No or Yes\? (Yes|No)",
+    r"Now answer this question: \"(.*?)\"\nOptions:\n- No\n- Yes (Yes|No)",
+    r'Q: (.*?)\? (Yes|No)',
+    r"Does the news headline (.*?)\?\nOptions:\n- Yes\n- No (Yes|No)",
+    r"Does the news headline (.*?)\? Yes or No\? (Yes|No)",
+    r"Question: (.*?)\nAnswer: (Yes|No)",
+    r"what is the answer to the question \"(.*?)\" (Yes|No)",
+    r"Does the news headline (.*?)\? (Yes|No)"]
 
 qa_pairs = []
 for block in data:
@@ -51,7 +51,7 @@ for pair in data:
 
 # 打印出去除_num后的id的数量
 print(f"Unique id count: {len(id_set)}")
-print(len(lis))
+# print(lis)
 
 # 统计Answer为"Yes","No"的数量
 count_no = sum(1 for item in data if item['Answer'] == 'No')

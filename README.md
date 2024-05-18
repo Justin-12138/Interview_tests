@@ -10,5 +10,5 @@
 
 #### 2.DecideNowQD
 
-+ [6 questions]()
++ [6 questions](https://github.com/Justin-12138/Interview_tests/tree/main/DecideNowQD)
 

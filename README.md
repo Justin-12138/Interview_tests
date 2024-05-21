@@ -8,7 +8,7 @@
   
 - [ML data](https://github.com/Justin-12138/Interview_tests/tree/main/FiveDimensions/ML)
 
-#### 2.DecideNowQD
+#### 2.Quick Decision   :100:
 
 + [6 questions](https://github.com/Justin-12138/Interview_tests/tree/main/DecideNowQD)
 
